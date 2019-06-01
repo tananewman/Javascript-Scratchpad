@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">    
+    <title>Document</title>
+</head>
+<body ng-app="Todo">
+    <h1>hello</h1>
+    <div class="page-container" ng-controller="TodoCtrl">
+        <input type="text" ng-model="message" />
+        <span> {{message}} </span>
+        <ul class="todo-list" ng-repeat="todo in todos track by $index">
+            <li>
+                <span>{{ todo }}</span>
+                <button ng-click="done(todo)" class="bt bt-achieve">Done</button>
+            </li>
+        </ul>        
+        <ul class="add-todo">
+            <li>
+                <input type="text" class="txt" placeholder="New Todo" ng-model="newTodo">
+                <button ng-click="add()">Add</button>
+            </li>
+        </ul>
+    </div>
+    <app></app>
+    <test></test>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script type="text/javascript" src="angular.js"></script>
+</body>
+</html>
